@@ -1,32 +1,108 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-  /*Set the background color for the whole page */
-background-color: #BF6C46;
+  font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+  color: #fff;
+  background-color: #000;
 }
 
 header {
-  background-color: #FFF7E1;
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  padding: 1rem 2rem;
+  background: #FFF7E1;
+  color: #000;
 }
 
-nav a {
-  margin: 0 1rem;
+.logo-img {
+  height: 40px;
+}
+
+.nav-left {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-left a {
+  color: #000;
   text-decoration: none;
-  color: #333;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-left a.take-action::after,
+.nav-left a.about-us::after {
+  content: '\25BC';
+  font-size: 0.6rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.give-button,
+.sign-in-button {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
   font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.give-button {
+  background: #FFC907;
+  border: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.give-button:hover,
+.donate-btn:hover {
+  transform: scale(1.02);
+  background: #ffd84a;
+}
+
+.give-button::before {
+  content: "Give";
+}
+
+.give-button::after {
+  content: "\1F4A7";
+  color: #8BD1CB;
+  font-size: 1rem;
+}
+
+.sign-in-button {
+  background: transparent;
+  border: none;
+  color: #000;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 20px;
+  background: #000;
+}
+
+.divider-line {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 0;
 }
 
 .hero {
-  background: url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
-  color: white;
+  background: url('https://via.placeholder.com/1200x1200') center/cover no-repeat;
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 8rem 1rem 6rem;
+  position: relative;
 }
 
 .hero h1 {
@@ -35,69 +111,81 @@ nav a {
 }
 
 .hero p {
-  font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .donate-btn {
-  background-color: #ffcc00;
-  color: black;
+  background: #FFC907;
+  color: #000;
   padding: 1rem 2rem;
   border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
   border-radius: 30px;
-  font-size: 1.1rem;
   cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.story {
-  background-color: #f4e2d8;
-  padding: 6rem 2rem; /* Increased padding to make the section larger */
-  text-align: center;
-}
-
-.story p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-}
-
-.social-section {
-  background-color: #c57048;
-  padding: 3rem 2rem;
-  color: white;
+.brand-images {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 6rem;
+  margin-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.brand-images figure {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  max-width: 300px;
 }
 
-.social-section .icons {
+.brand-images img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.brand-images figcaption {
+  color: #fff;
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+}
+
+.footer {
+  background: #FF902A;
+  color: #fff;
+  padding: 2rem 1rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
-.social-section .icons img {
-  width: 30px;
-  height: 30px;
+.footer .socials {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
 
-  .donate-btn {
-    width: 100%;
-  }
-
-  .social-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .social-section .icons {
-    justify-content: center;
-    margin-top: 1rem;
-  }
+.social-link img {
+  width: 24px;
+  height: 24px;
 }

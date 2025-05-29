@@ -1,147 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>charity: water - Giving Back Made Easy</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-    }
-
-    header {
-      background-color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
-    .hero {
-      background: url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 6rem 2rem;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 2rem;
-    }
-
-    .donate-btn {
-      background-color: #ffcc00;
-      color: black;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-
-    .story {
-      background-color: #f4e2d8;
-      padding: 6rem 2rem;
-      text-align: center;
-    }
-
-    .story p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    .social-section {
-      background-color: #c57048;
-      padding: 2rem;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .social-section .icons {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .social-section .icons img {
-      width: 30px;
-      height: 30px;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .donate-btn {
-        width: 100%;
-      }
-
-      .social-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .social-section .icons {
-        justify-content: center;
-        margin-top: 1rem;
-      }
-    }
-  </style>
+  <title>Charity: Water - Give Back Made Easy</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <div><strong>charity: water</strong></div>
-    <nav>
-      <a href="#">Take Action</a>
-      <a href="#">About Us</a>
+    <div class="nav-left">
+      <img src="https://via.placeholder.com/150x40?text=charity:water" alt="charity: water logo" class="logo-img" />
+      <a href="#" class="take-action">Take Action</a>
+      <a href="#" class="about-us">About Us</a>
       <a href="#">Why Water?</a>
-    </nav>
-    <div><a href="#" class="donate-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem">Give 💛</a></div>
+    </div>
+    <div class="header-right">
+      <button class="sign-in-button">Sign In</button>
+      <div class="vertical-line"></div>
+      <button class="give-button"></button>
+    </div>
   </header>
+
+  <div class="divider-line"></div>
 
   <section class="hero">
     <h1>GIVING BACK MADE EASY</h1>
-    <p>Less than $2 a day will provide basic access to safe drinking water to 12 people for a year. Feel confident with 100% of every donation going directly to fund water projects.</p>
+    <p>
+      Less than $2 a day will provide basic access to safe drinking water to 12 people for a year. 
+      Feel confident with 100% of every donation going directly to fund water projects.
+    </p>
     <button class="donate-btn">DONATE NOW</button>
-  </section>
 
-  <section class="story">
-    <p>Every day, millions of people around the world walk miles just to fetch water. Your donation helps us build sustainable water projects that transform lives. Together, we can end the water crisis.</p>
-  </section>
-
-  <section class="social-section">
-    <div>VISIT US!</div>
-    <div class="icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" />
-      <img src="https://cdn-icons-png.flaticon.com/512/60/60510.png" alt="Link" />
+    <div class="brand-images">
+      <figure>
+        <img src="https://via.placeholder.com/300x300" alt="Brand image 1">
+        <figcaption>Brand Caption 1</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/300x300" alt="Brand image 2">
+        <figcaption>Brand Caption 2</figcaption>
+      </figure>
     </div>
-    <div>SHARE</div>
   </section>
+
+  <footer class="footer">
+    <div>VISIT US!</div>
+    <div class="socials">
+      <a href="#" class="social-link"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">Facebook</a>
+      <a href="#" class="social-link"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">Instagram</a>
+      <a href="#" class="social-link"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">YouTube</a>
+      <a href="#" class="social-link"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">TikTok</a>
+      <a href="#" class="social-link"><img src="https://cdn-icons-png.flaticon.com/512/786/786205.png" alt="Share">Share</a>
+    </div>
+  </footer>
 </body>
 </html>
+
 
