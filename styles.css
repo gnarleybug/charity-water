@@ -1,19 +1,101 @@
-/* charity: water Brand Colors & Fonts
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
 
-Fonts:
-- Proxima Nova
-- Avenir
+.hero {
+  background: url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+}
 
-*/
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.donate-btn {
+  background-color: #ffcc00;
+  color: black;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.story {
+  background-color: #f4e2d8;
+  padding: 6rem 2rem; /* Increased padding to make the section larger */
+  text-align: center;
+}
+
+.story p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.social-section {
+  background-color: #c57048;
+  padding: 3rem 2rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-section .icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-section .icons img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .donate-btn {
+    width: 100%;
+  }
+
+  .social-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-section .icons {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
