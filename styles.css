@@ -119,7 +119,7 @@ header {
 }
 
 .hero {
-  background: url(Madagascar_2019_CG-2726.jpg) center/cover no-repeat;
+  background: url(7F50D51F-5B39-46F9-9863-AFCED9024805_1_201_a.jpeg) center/cover no-repeat;
   text-align: center;
   padding: 8rem 1rem 6rem;
   position: relative;
@@ -130,16 +130,15 @@ header {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: left;
-  margin-left: 10rem;
+  margin-left: 3rem;
 }
 
 .hero p {
   max-width: 600px;
-  margin: 0 auto 2rem;
+  margin: 0 0 2rem 0;
   font-size: 1.1rem;
   line-height: 1.5;
   text-align: center;
-  margin-left: 7rem;
 }
 
 .donate-btn {
@@ -153,8 +152,8 @@ header {
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease;
   display: block;
-  margin-left:320px;
-  margin-right: 10px;
+  margin-left:190px;
+  margin-right: auto;
 }
 
 .brand-images {
@@ -162,11 +161,12 @@ header {
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 6rem;
   padding-left: 2rem;
 }
 
 .brand-images figure {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -175,8 +175,8 @@ header {
 }
 
 .brand-images img {
-  width: 250px;
-  max-width: 250px;
+  width: 300px;
+  max-width: 300px;
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
@@ -184,8 +184,14 @@ header {
 }
 
 .brand-images figcaption {
+  position:absolute;
+  bottom: 20px;
+  left: 20px;
   color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   font-size: 0.95rem;
+  max-width: 80%;
   margin-top: 0;
   text-align: left;
 }
