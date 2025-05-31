@@ -227,6 +227,7 @@ header {
   text-align: center;
   padding: 8rem 1rem 6rem;
   position: relative;
+  min-height: 500px;
 }
 
 .hero h1 {
@@ -572,3 +573,79 @@ body {
     color: #000;
   }
 }
+/* Beginner-friendly: Make the hero photo more visible on desktop screens only */
+@media (min-width: 391px) {
+  body {
+    min-height: 100vh;         /* Make the body at least as tall as the screen */
+    display: flex;             /* Use flexbox for layout */
+    flex-direction: column;    /* Stack content vertically */
+  }
+  .header-right {
+    display: flex;           /* Show the header buttons on desktop */
+    align-items: center;
+    justify-content: flex-end;
+    position: static;        /* Put back in normal flow */
+    background: none;
+    width: auto;
+    padding: 0;
+    margin: 0 2rem 0 0;
+    gap: 1rem;
+  }
+  .footer {
+    display:none;
+    margin-top: auto;          /* Push the footer to the bottom */
+  }
+  .sign-in-button,
+  .give-button {
+    font-size: 1rem;         /* Normal button size for desktop */
+    padding: 0.5rem 1.2rem;
+    margin: 0;
+    border-radius: 25px;
+    border: none;
+    background: #FFC907;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .sign-in-button {
+    background: transparent;
+    color: #000;
+    border: 1px solid #FFC907;
+  }
+  .sign-in-button:hover,
+  .give-button:hover {
+    background: #ffd84a;
+  }
+  .hero {
+    /* Add space around the hero section */
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    max-width: 900px;         /* Limit width for readability */
+    background: url(7F50D51F-5B39-46F9-9863-AFCED9024805_1_201_a.jpeg) center/cover no-repeat;
+    border-radius: 12px;      /* Rounded corners */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07); /* Soft shadow */
+    text-align: center;
+  }
+  .brand-images {
+    display: flex;            /* Show images side by side */
+    justify-content: center;  /* Center images */
+    gap: 2rem;                /* Space between images */
+    margin-top: 2rem;
+  }
+  .brand-images img {
+    max-width: 320px;         /* Make images larger on desktop */
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+  }
+  .brand-images figure {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+  }
+  .brand-images figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #444;
+  } }
