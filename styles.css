@@ -37,16 +37,33 @@ header {
   color: #000;
   text-decoration: none;
   font-size: 0.9rem;
-  display: flex;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  display: inline-flex;
   align-items: center;
   gap: 0.25rem;
   position: relative;
 }
+.nav-left a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Place the line at the bottom of the link */
+  height: 3px;
+  background: #FFC907; /* Yellow color */
+  border-radius: 2px;
+  width: 0; /* Hidden by default */
+  transition: width 0.1s;
+  margin: 0 auto;
+}
 .nav-arrow {
   display: inline-block;      /* Keep the arrow inline with the links */
   vertical-align: middle;     /* Align the arrow with the text */
-  margin-left: 0 rem;       
-  margin-right: 0 rem;    /* Space on both sides of the arrow */
+  margin-left: 0px;       
+  margin-right: 0px;    /* Space on both sides of the arrow */
   font-size: 0.7rem;            /* Size of the arrow */
   color: #000;                /* Arrow color */
   /* Use a thin, hollow down arrow (Unicode: ▽) */
@@ -55,25 +72,23 @@ header {
   margin-left: 1 rem;       /* Less space to the left of the first arrow */
   margin-right: 0;       /* Keep right space the same */
 }
+.take-action .nav-arrow {
+  /* Keep the arrow close to the text */
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  font-size: 0.7rem;
+  color: #000;
+  transition: color 0.2s, transform 0.2s; /* Smooth color and movement */
+}
+.nav-left a:hover .nav-arrow {
+  color: #FFC907; /* Change arrow color on hover */
+  transform: translateY(-2px); /* Move the arrow up slightly on hover */
+}
 .nav-left a span {
   position: relative; /* Needed for the underline effect */
   display: inline-block;
 }
-.nav-left a span::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #FFC907;
-  border-radius: 2px;
-  transition: width 0.1s;
-  margin: 0 auto;
-}
 
-
-.nav-left a:hover span::after {
-  width: 100%;
-}
 .nav-left a:hover::after {
   width: 100%; /* Full width underline on hover */
 }
@@ -129,10 +144,30 @@ header {
   background: transparent;
   border: none;
   color: #000;
-  margin-left: 590px;
+  margin-left: 500px;
   margin-right:0;
+  position:relative;
+  overflow: hidden;
 }
-
+.sign-in-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transition: left 0.4s;
+  pointer-events: none; /* Let clicks go through */
+}
+.sign-in-button:hover::after {
+  left: 120%;
+}
 .vertical-line {
   width: 1px;
   height: 20px;
@@ -233,16 +268,21 @@ header {
 .footer {
   background: #FF902A;
   color: #fff;
-  padding: 4rem 1rem;
+  padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  font size: 1.5rem;
 }
-
+.footer > div:first-child {
+  font-size: 2rem;            /* Bigger heading */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 .footer .socials {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -250,12 +290,23 @@ header {
 .social-link {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition:
+   transform 0.2s,
+   box-shadow 0.2s,
+   background 0.2s;
 }
-
+.social-link:hover {
+  transform: scale(1.08);     /* Make the link a little bigger */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35); /* Soft shadow */
+  background: #ffb366;        /* Slightly lighter orange background */
+  color: #fff;                /* Keep text white */
+}
 .social-link img {
   width: 24px;
   height: 24px;
