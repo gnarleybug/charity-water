@@ -65,13 +65,14 @@ header {
   margin-left: 0px;       
   margin-right: 0px;    /* Space on both sides of the arrow */
   font-size: 0.7rem;            /* Size of the arrow */
-  color: #000;                /* Arrow color */
+  color: #000;
+  transition: transform 0.08s, color 0.08s                /* Arrow color */
   /* Use a thin, hollow down arrow (Unicode: ▽) */
 }
 
 .nav-left a:hover .nav-arrow {
-  color: #FFC907; /* Change arrow color on hover */
-  transform: translateY(-2px); /* Move the arrow up slightly on hover */
+  transform: rotate(180deg); /* Rotate the arrow on hover */
+  color: #FFC907;
 }
 .nav-left a span {
   position: relative; /* Needed for the underline effect */
@@ -81,7 +82,54 @@ header {
 .nav-left a:hover::after {
   width: 100%; /* Full width underline on hover */
 }
+.dropdown-menu {
+  display: none;                /* Hidden by default */
+  position: absolute;           /* Position below the link */
+  background: #fff;
+  color: #000;
+  min-width: 180px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  z-index: 100;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+.dropdown-menu a:hover {
+  background: #FFF7E1;
+}
+.take-action {
+  position: relative; /* This helps the dropdown appear below the link */
+}
+.take-action:hover .dropdown-menu {
+  display: flex;                /* Show the menu as a column */
+}
+.about-us-link {
+  position: relative; /* Needed for the dropdown to appear below the link */
+}
+.about-us-link:hover .dropdown-menu {
+  display: flex;      /* Show the menu as a column */
+}
+.take-action:hover .dropdown-menu,
+.take-action .dropdown-menu:hover,
+.about-us-link:hover .dropdown-menu,
+.about-us-link .dropdown-menu:hover {
+  display: flex;
+}
+.dropdown-menu a {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background: none;
+  display: block;
+}
 
+.dropdown-menu a:hover {
+  background: #FFF7E1;
+}
 .header-right {
   display: flex;
   align-items: center;
@@ -255,7 +303,11 @@ header {
 
 
 .footer {
-  background: #FF902A;
+  background: linear-gradient(
+    to bottom,
+    #000 0%,
+    #FF902A 100%
+  );
   color: #fff;
   padding: 5rem 2rem;
   display: flex;
@@ -294,7 +346,7 @@ header {
   transform: scale(1.08);     /* Make the link a little bigger */
   box-shadow: 0 4px 24px rgba(0,0,0,0.35); /* Soft shadow */
   background: #ffb366;        /* Slightly lighter orange background */
-  color: #fff;                /* Keep text white */
+  color: #000;                /* Keep text white */
 }
 .social-link img {
   width: 24px;
