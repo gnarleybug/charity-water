@@ -357,7 +357,7 @@ body {
   border-radius: 4px;
   transition: background 0.2s;
   background: none;
-  color: #000;              /* Black text for contrast */
+  color: #fff;              /* Black text for contrast */
 }
 
 .social-link img {
@@ -381,13 +381,16 @@ body {
     z-index: 1001;
     width: 100%;
     height: auto;
-    min-height: 32px;                /* Shorter header for mobile */
-    padding: 0.1rem 0;
+    min-height: 36px;                /* Shorter header for mobile */
+    padding: 0rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
+  .take-action > a,
+  .about-us-link > a {
+    padding-top: 0.2rem; /* Add a little space at the top */
+  }
   /* Make the logo bigger but keep it in the corner */
   .logo-img {
     max-height: 40px;  
@@ -410,16 +413,13 @@ body {
     margin-left: 0;
   }
   .nav-left a {
-    display: inline-flex;   /* Show all links */
-    font-size: 0.35rem;      /* Small text for mobile */
-    padding: 0.1rem 0.15rem;
-    margin-top: 0;          /* No extra margin */
+    display: inline-flex;      /* Show all links in a row */
+    font-size: 0.35rem;        /* Small text for mobile */
+    padding: 0.1rem 0.15rem;   /* Same padding for all links */
+    align-items: center;       /* Vertically center text */
+    margin-right: 0;           /* No extra space after any link */
   }
-  .nav-left a[href*="why-water"] {
-    padding-top:2rem;
-    margin-right: 0.2rem;
-    margin-top: 0;
-  }
+}
   .nav-arrow {
     font-size: 0.3rem;   /* Make the arrow much smaller on mobile */
     margin-left: 0.1rem;
