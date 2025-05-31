@@ -119,7 +119,7 @@ header {
 }
 
 .hero {
-  background: url(Screenshot\ 2025-05-30\ at\ 10.22.20\ PM.png) center/cover no-repeat;
+  background: url(Madagascar_2019_CG-2726.jpg) center/cover no-repeat;
   text-align: center;
   padding: 8rem 1rem 6rem;
   position: relative;
@@ -175,9 +175,9 @@ header {
 }
 
 .brand-images img {
-  width: 100px;
-  max-width: 100px;
-  height: 100px;
+  width: 250px;
+  max-width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 10px;
   display: block;
@@ -193,7 +193,7 @@ header {
 .footer {
   background: #FF902A;
   color: #fff;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
