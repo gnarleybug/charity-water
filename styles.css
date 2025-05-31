@@ -68,18 +68,7 @@ header {
   color: #000;                /* Arrow color */
   /* Use a thin, hollow down arrow (Unicode: ▽) */
 }
-.nav-left a.take-action + .nav-arrow {
-  margin-left: 1 rem;       /* Less space to the left of the first arrow */
-  margin-right: 0;       /* Keep right space the same */
-}
-.take-action .nav-arrow {
-  /* Keep the arrow close to the text */
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
-  font-size: 0.7rem;
-  color: #000;
-  transition: color 0.2s, transform 0.2s; /* Smooth color and movement */
-}
+
 .nav-left a:hover .nav-arrow {
   color: #FFC907; /* Change arrow color on hover */
   transform: translateY(-2px); /* Move the arrow up slightly on hover */
@@ -273,7 +262,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  font size: 1.5rem;
+  font-size: 1.5rem;
 }
 .footer > div:first-child {
   font-size: 2rem;            /* Bigger heading */
@@ -310,4 +299,73 @@ header {
 .social-link img {
   width: 24px;
   height: 24px;
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;      /* Stack header items vertically */
+    height: auto;                /* Let header grow as needed */
+    padding: 1rem;
+  }
+
+  .nav-left {
+    gap: 0.5rem;                 /* Less space between nav items */
+    flex-direction: column;      /* Stack nav links vertically */
+    align-items: flex-start;
+  }
+
+  .logo-img {
+    max-height: 60px;            /* Smaller logo */
+  }
+
+  .header-right {
+    gap: 0.5rem;
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .donate-btn,
+  .sign-in-button,
+  .give-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .brand-images {
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .brand-images figure {
+    flex-direction: column;      /* Stack image and caption vertically */
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  .brand-images img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    font-size: 1rem;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+
+  .footer > div:first-child {
+    font-size: 1.2rem;
+  }
+
+  .footer .socials {
+    gap: 1rem;
+  }
+
+  .social-link {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+  }
 }
