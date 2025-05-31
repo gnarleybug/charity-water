@@ -49,18 +49,19 @@ header {
   display: flex;
   align-items: center;
   margin-left: auto;
-  gap: 0.75rem;
+  width: auto;
 }
 
-.give-button,
-.sign-in-button {
+ .sign-in-button,
+.give-button {
+  margin-left: 0;
+  margin-right: 0;
   padding: 0.5rem 1rem;
   border-radius: 25px;
   font-weight: normal;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease;
   font-size: 0.9rem;
-  margin-right;
 }
 
 .give-button {
@@ -70,8 +71,8 @@ header {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  margin-left: auto;
-  margin-right: 0;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 
 .give-button:hover,
@@ -94,18 +95,23 @@ header {
   background: transparent;
   border: none;
   color: #000;
+  margin-left: 660px;
+  margin-right:0;
 }
 
 .vertical-line {
   width: 1px;
   height: 20px;
   background: #000;
+  margin-left: 0rem;
+  margin-right: 0;
 }
 
 .divider-line {
   height: 1px;
   background: rgba(0, 0, 0, 0.08);
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .hero {
@@ -143,8 +149,8 @@ header {
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease;
   display: block;
-  margin-left:auto;
-  margin-right: 915px;
+  margin-left:320px;
+  margin-right: 10px;
 }
 
 .brand-images {
