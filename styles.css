@@ -40,12 +40,33 @@ header {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  position: relative;
 }
-
-.nav-left a.take-action::after,
-.nav-left a.about-us::after {
+.nav-left a span {
+  position: relative; /* Needed for the underline effect */
+  display: inline-block;
+}
+.nav-left a span::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #FFC907;
+  border-radius: 2px;
+  transition: width 0.3s;
+  margin: 0 auto;
+}
+.nav-left a.take-action::before,
+.nav-left a.about-us::before {
   content: '\25BC';
   font-size: 0.6rem;
+  margin-right: 0.25rem;
+}
+.nav-left a:hover span::after {
+  width: 100%;
+}
+.nav-left a:hover::after {
+  width: 100%; /* Full width underline on hover */
 }
 
 .header-right {
@@ -99,7 +120,7 @@ header {
   background: transparent;
   border: none;
   color: #000;
-  margin-left: 577px;
+  margin-left: 500px;
   margin-right:0;
 }
 
@@ -181,6 +202,10 @@ header {
   object-fit: cover;
   border-radius: 10px;
   display: block;
+  transition: box-shadow 0.3s;
+}
+.brand-images img:hover {
+  box-shadow: 0 12px 64px rgba(0,0,0,0.3); /* Soft shadow around the image */
 }
 
 .brand-images figcaption {
