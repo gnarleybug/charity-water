@@ -87,8 +87,9 @@ header {
   display: none;                /* Hidden by default */
   position: absolute;           /* Position below the link */
   background: #fff;
+  border: 1px solid #ccc;
   color: #000;
-  min-width: 180px;
+  min-width: 150px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   border-radius: 8px;
   margin-top: 0.5rem;
@@ -103,13 +104,13 @@ header {
   position: relative; /* This helps the dropdown appear below the link */
 }
 .take-action:hover .dropdown-menu {
-  display: flex;                /* Show the menu as a column */
+  display: block;                /* Show the menu as a column */
 }
 .about-us-link {
   position: relative; /* Needed for the dropdown to appear below the link */
 }
 .about-us-link:hover .dropdown-menu {
-  display: flex;      /* Show the menu as a column */
+  display: block;      /* Show the menu as a column */
 }
 .take-action:hover .dropdown-menu,
 .take-action .dropdown-menu:hover,
@@ -380,20 +381,20 @@ body {
     right: 0;
     z-index: 1001;
     width: 100%;
-    height: auto;
-    min-height: 36px;                /* Shorter header for mobile */
-    padding: 0rem 0;
+    height: 26px;
+    min-height: 28px;                /* Shorter header for mobile */
+    padding: 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .take-action > a,
   .about-us-link > a {
-    padding-top: 0.2rem; /* Add a little space at the top */
+    padding-top: 0; /* Add a little space at the top */
   }
   /* Make the logo bigger but keep it in the corner */
   .logo-img {
-    max-height: 40px;  
+    max-height: 70px;  
     width: auto;
     padding: 0%;
   }
@@ -402,8 +403,8 @@ body {
   /* Show all nav links in a row on mobile */
   .nav-left {
     margin-top: 0;
-    padding-top: 0.15rem;
-    padding-bottom: 0.15rem;
+    padding-top: 0;
+    padding-bottom: 0.1rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
