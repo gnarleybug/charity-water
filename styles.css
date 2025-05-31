@@ -29,7 +29,7 @@ header {
   align-items: center;
   gap: 1.25rem;
   margin-left: 0;
-  margin-right: 2rem;
+  margin-right: 0rem;
 }
 
 .nav-left a {
@@ -42,6 +42,19 @@ header {
   gap: 0.25rem;
   position: relative;
 }
+.nav-arrow {
+  display: inline-block;      /* Keep the arrow inline with the links */
+  vertical-align: middle;     /* Align the arrow with the text */
+  margin-left: 0 rem;       
+  margin-right: 0 rem;    /* Space on both sides of the arrow */
+  font-size: 0.7rem;            /* Size of the arrow */
+  color: #000;                /* Arrow color */
+  /* Use a thin, hollow down arrow (Unicode: ▽) */
+}
+.nav-left a.take-action + .nav-arrow {
+  margin-left: 1 rem;       /* Less space to the left of the first arrow */
+  margin-right: 0;       /* Keep right space the same */
+}
 .nav-left a span {
   position: relative; /* Needed for the underline effect */
   display: inline-block;
@@ -53,15 +66,11 @@ header {
   height: 3px;
   background: #FFC907;
   border-radius: 2px;
-  transition: width 0.3s;
+  transition: width 0.1s;
   margin: 0 auto;
 }
-.nav-left a.take-action::before,
-.nav-left a.about-us::before {
-  content: '\25BC';
-  font-size: 0.6rem;
-  margin-right: 0.25rem;
-}
+
+
 .nav-left a:hover span::after {
   width: 100%;
 }
@@ -120,7 +129,7 @@ header {
   background: transparent;
   border: none;
   color: #000;
-  margin-left: 500px;
+  margin-left: 590px;
   margin-right:0;
 }
 
