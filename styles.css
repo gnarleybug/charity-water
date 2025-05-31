@@ -57,6 +57,7 @@ header {
 
  .sign-in-button,
 .give-button {
+  text-transform: uppercase;
   margin-left: 0;
   margin-right: 0;
   padding: 0.5rem 1rem;
@@ -98,7 +99,7 @@ header {
   background: transparent;
   border: none;
   color: #000;
-  margin-left: 590px;
+  margin-left: 577px;
   margin-right:0;
 }
 
