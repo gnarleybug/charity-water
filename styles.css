@@ -152,7 +152,7 @@ header {
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease;
   display: block;
-  margin-left:190px;
+  margin-left:200px;
   margin-right: auto;
 }
 
@@ -185,16 +185,16 @@ header {
 
 .brand-images figcaption {
   position:absolute;
-  bottom: 20px;
+  top: 20px;
   left: 20px;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 0.95rem;
   max-width: 80%;
-  margin-top: 0;
   text-align: left;
 }
+
 
 .footer {
   background: #FF902A;
