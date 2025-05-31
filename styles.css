@@ -26,11 +26,14 @@ header {
 
 .nav-left {
   display: flex;
-  gap: 1.5rem;
   align-items: center;
+  gap: 1.25rem;
+  margin-left: 0;
+  margin-right: 2rem;
 }
 
 .nav-left a {
+  text-transform: uppercase;
   color: #000;
   text-decoration: none;
   font-size: 0.9rem;
@@ -95,7 +98,7 @@ header {
   background: transparent;
   border: none;
   color: #000;
-  margin-left: 660px;
+  margin-left: 590px;
   margin-right:0;
 }
 
@@ -155,23 +158,25 @@ header {
 
 .brand-images {
   display: flex;
-  justify-content: center;
-  gap: 6rem;
-  margin-top: 6rem;
-  padding-bottom: 4rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-left: 2rem;
 }
 
 .brand-images figure {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  max-width: 300px;
+  max-width: 500px;
+  gap: 1rem;
 }
 
 .brand-images img {
-  width: 100%;
-  max-width: 300px;
-  height: 300px;
+  width: 100px;
+  max-width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 10px;
   display: block;
@@ -180,7 +185,8 @@ header {
 .brand-images figcaption {
   color: #fff;
   font-size: 0.95rem;
-  margin-top: 0.75rem;
+  margin-top: 0;
+  text-align: left;
 }
 
 .footer {
