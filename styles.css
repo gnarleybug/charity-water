@@ -578,7 +578,9 @@ body {
   body {
     min-height: 100vh;         /* Make the body at least as tall as the screen */
     display: flex;             /* Use flexbox for layout */
-    flex-direction: column;    /* Stack content vertically */
+    flex-direction: column;
+    padding-bottom: 7rem;
+    background-color: #FF902A;   /* Stack content vertically */
   }
   .header-right {
     display: flex;           /* Show the header buttons on desktop */
@@ -590,10 +592,6 @@ body {
     padding: 0;
     margin: 0 2rem 0 0;
     gap: 1rem;
-  }
-  .footer {
-    display:none;
-    margin-top: auto;          /* Push the footer to the bottom */
   }
   .sign-in-button,
   .give-button {
@@ -648,4 +646,8 @@ body {
     margin-top: 0.5rem;
     font-size: 1rem;
     color: #444;
-  } }
+  }
+  .footer {
+    display: none; /* Hide the footer on desktop */
+  }
+ }
