@@ -5,17 +5,23 @@ body {
   background-color: #000;
 }
 
+/* Set a fixed height for the header */
 header {
+  height: 60px; /* You can change this number */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem 1rem 2rem;
   background: #FFF7E1;
   color: #000;
 }
 
+/* Make the logo fit inside the header */
 .logo-img {
-  height: 40px;
+  max-height: 200px; /* The logo will not be taller than the header */
+  width: auto;      /* Keeps the logo from stretching */
+  object-fit: cover; /* Crops the image if needed */
+  object-position: center; /* Centers the image */
 }
 
 .nav-left {
@@ -42,6 +48,7 @@ header {
 .header-right {
   display: flex;
   align-items: center;
+  margin-left: auto;
   gap: 0.75rem;
 }
 
@@ -49,10 +56,11 @@ header {
 .sign-in-button {
   padding: 0.5rem 1rem;
   border-radius: 25px;
-  font-weight: bold;
+  font-weight: normal;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease;
   font-size: 0.9rem;
+  margin-right;
 }
 
 .give-button {
@@ -62,6 +70,8 @@ header {
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .give-button:hover,
@@ -99,15 +109,18 @@ header {
 }
 
 .hero {
-  background: url('https://via.placeholder.com/1200x1200') center/cover no-repeat;
+  background: url(Screenshot\ 2025-05-30\ at\ 10.22.20\ PM.png) center/cover no-repeat;
   text-align: center;
   padding: 8rem 1rem 6rem;
   position: relative;
 }
 
 .hero h1 {
+  font-weight: normal;
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  text-align: left;
+  margin-left: 10rem;
 }
 
 .hero p {
@@ -115,6 +128,8 @@ header {
   margin: 0 auto 2rem;
   font-size: 1.1rem;
   line-height: 1.5;
+  text-align: center;
+  margin-left: 7rem;
 }
 
 .donate-btn {
@@ -127,6 +142,9 @@ header {
   border-radius: 30px;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease;
+  display: block;
+  margin-left:auto;
+  margin-right: 915px;
 }
 
 .brand-images {
